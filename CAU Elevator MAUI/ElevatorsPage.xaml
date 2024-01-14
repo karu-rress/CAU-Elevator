@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAU_Elevator_MAUI.ElevatorsPage"
+             Title="Elevators"
+            xmlns:model="clr-namespace:CAU_Elevator_MAUI"  
+             xmlns:local="clr-namespace:CAU_Elevator_MAUI.ViewModels">
+    
+    <CollectionView Margin="10" x:Name="EVCollectionView" x:DataType="local:ElevatorVM"
+                        ItemsSource="{Binding Lists}" SelectionMode="None">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10" x:DataType="model:Elevator">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="elevator.png" Grid.RowSpan="2" 
+                                   HeightRequest="60" WidthRequest="60"/>
+                    <Label Text="{Binding Id, StringFormat='{0}호기'}" Grid.Row="0" Grid.Column="1" Margin="8, 5, 0, 0"/>
+                    <Label Text="{Binding FloorsRange, StringFormat='운행층: {0}'}" Grid.Row="1" Grid.Column="1" FontSize="Caption" Margin="8, 0, 0, 0"/>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

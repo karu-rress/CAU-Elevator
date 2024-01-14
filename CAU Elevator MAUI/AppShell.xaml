@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CAU_Elevator_MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CAU_Elevator_MAUI">
+
+    <TabBar >
+        <ShellContent
+                Title="Search"
+                Icon="search.png"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        <ShellContent 
+            Title="Map"
+            Icon="map.png"
+            ContentTemplate="{DataTemplate local:MapPage}"
+            Route="MapPage"/>
+        <ShellContent
+            Title="About"
+            Icon="icon_about.png"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Route="AboutPage"/>
+    </TabBar>
+</Shell>

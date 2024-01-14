@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAU_Elevator_MAUI.MapPage"
+             Title="MapPage"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+             xmlns:controls="clr-namespace:Plugin.MauiMTAdmob.Controls;assembly=Plugin.MauiMTAdmob">
+
+        <maps:Map x:Name="map" IsShowingUser="true" >
+            <x:Arguments>
+                <MapSpan>
+                    <x:Arguments>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.503563</x:Double>
+                                <x:Double>126.9560827</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                        <x:Double>0.0008</x:Double>
+                        <x:Double>0.0008</x:Double>
+                    </x:Arguments>
+                </MapSpan>
+            </x:Arguments>
+            <maps:Map.Pins>
+
+                <maps:Pin Label="엘리베이터 1, 2, 3, 4호기"
+                           Address="운행층: 지하6층~9층">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.5038152</x:Double>
+                                <x:Double>126.9561715</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+
+                <maps:Pin Label="엘리베이터 5호기 (비상용)"
+                           Address="운행층: 지하6층~9층">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.5037410</x:Double>
+                                <x:Double>126.9561775</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+
+                <maps:Pin Label="엘리베이터 6, 7, 8, 9호기"
+                           Address="운행층: 지하3층~12층">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.5034780</x:Double>
+                                <x:Double>126.9559351</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+
+                <maps:Pin Label="엘리베이터 10호기 (비상용)"
+                           Address="운행층: 지하3층~12층">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.5035189</x:Double>
+                                <x:Double>126.9559496</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+
+                <maps:Pin Label="엘리베이터 11, 12호기"
+                           Address="운행층: 지하3층~9층">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.5035963</x:Double>
+                                <x:Double>126.9560827</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+
+                <maps:Pin Label="대형강의실용 엘리베이터 (이용제한)"
+                           Address="운행층: 지하5층&lt;-&gt;지하6층">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>37.5040990</x:Double>
+                                <x:Double>126.9566181</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+
+            </maps:Map.Pins>
+        </maps:Map>
+</ContentPage>

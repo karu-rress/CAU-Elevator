@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAU_Elevator_MAUI.MainPage"
+             xmlns:model="clr-namespace:CAU_Elevator_MAUI"  
+             xmlns:local="clr-namespace:CAU_Elevator_MAUI.ViewModels"
+             xmlns:controls="clr-namespace:Plugin.MauiMTAdmob.Controls;assembly=Plugin.MauiMTAdmob"
+            Title="Search">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="E/V 목록" Command="{Binding ListCommand}" />
+    </ContentPage.ToolbarItems>
+
+        <ScrollView>
+            <VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Grid Padding="10, 15, 10, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Picker x:Name="DepartPicker" Title="현재 층">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>12F</x:String>
+                                    <x:String>11F</x:String>
+                                    <x:String>10F</x:String>
+                                    <x:String>9F</x:String>
+                                    <x:String>8F</x:String>
+                                    <x:String>7F</x:String>
+                                    <x:String>6F</x:String>
+                                    <x:String>5F</x:String>
+                                    <x:String>4F</x:String>
+                                    <x:String>3F</x:String>
+                                    <x:String>2F</x:String>
+                                    <x:String>1F</x:String>
+                                    <x:String>B1</x:String>
+                                    <x:String>B2</x:String>
+                                    <x:String>B3</x:String>
+                                    <x:String>B4</x:String>
+                                    <x:String>B5</x:String>
+                                    <x:String>B6</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Label Grid.Column="1" Text="➡️" FontSize="Large" 
+                                   VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="DestPicker" Title="목적지" Grid.Column="2">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>12F</x:String>
+                                    <x:String>11F</x:String>
+                                    <x:String>10F</x:String>
+                                    <x:String>9F</x:String>
+                                    <x:String>8F</x:String>
+                                    <x:String>7F</x:String>
+                                    <x:String>6F</x:String>
+                                    <x:String>5F</x:String>
+                                    <x:String>4F</x:String>
+                                    <x:String>3F</x:String>
+                                    <x:String>2F</x:String>
+                                    <x:String>1F</x:String>
+                                    <x:String>B1</x:String>
+                                    <x:String>B2</x:String>
+                                    <x:String>B3</x:String>
+                                    <x:String>B4</x:String>
+                                    <x:String>B5</x:String>
+                                    <x:String>B6</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Button Text="검색" WidthRequest="70" Clicked="Button_Clicked" 
+                                    Grid.Column="3" />
+                    </Grid>
+                    <Label x:Name="ErrorLabel" Text="같은 층인데 뭐하러 엘베를 타요" 
+                               HorizontalOptions="CenterAndExpand" TextColor="Red" IsVisible="false" />
+                </VerticalStackLayout>
+                <StackLayout x:Name="MainStackLayout">
+                    <!--BoxView Margin="10, 0, 10, 0" Color="#CCCCCCCC" HeightRequest="1" /-->
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>

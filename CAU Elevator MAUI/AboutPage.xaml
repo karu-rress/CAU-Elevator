@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAU_Elevator_MAUI.AboutPage"
+             Title="About"
+             xmlns:controls="clr-namespace:Plugin.MauiMTAdmob.Controls;assembly=Plugin.MauiMTAdmob">
+
+    <VerticalStackLayout >
+        <Image Source="appicon.png" WidthRequest="150" HeightRequest="150"
+               Margin="0, 80, 0, 50" VerticalOptions="Center"/>
+        <Label 
+            Text="CAU Elevator"
+            FontSize="Large"
+            FontAttributes="Bold"
+            Margin="30"
+            HorizontalOptions="Center" />
+        <Label 
+            Margin="0, 0, 0, 30"
+            Text="중앙대학교 310관 엘리베이터 길잡이"
+            FontSize="Small"
+            HorizontalOptions="Center" />
+            <Label 
+            Margin="0, 0, 0, 30"
+            Text="Version 1.0 (Beta)"
+            FontSize="Small"
+            HorizontalOptions="Center" />
+            <Label 
+            Text="from Rolling Ress"
+            FontSize="Small"
+            HorizontalOptions="Center" />
+        <Label 
+            Text="developed by Karu (산업보안학과 23)"
+            FontSize="Small"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
