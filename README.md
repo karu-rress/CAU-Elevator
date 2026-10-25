@@ -23,4 +23,4 @@
 - 13호기: (대형강의실 전용) B6(강의실)~B5 운행
 
 ## 다운로드
-- Android: [CAU Elevator APK](cau-elevator.apk)
+- [Release 페이지](https://github.com/karu-rress/CAU-Elevator/releases/tag/1.0.0)에서 확인하실 수 있습니다.
