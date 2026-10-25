@@ -198,6 +198,4 @@ public static class Elevators
     public static Elevator No10 { get; } = new(10, (37.5035189, 126.9559496), new() { B3, B2, B1, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12 }, "B3~B1, F1~F12", MovingProperty.Both);
     public static Elevator No11 { get; } = new(11, (37.5035963, 126.9560827), new() { B3, B2, B1, F1, F3, F6, F9 }, "B3~B1, F1, F3, F6, F9", MovingProperty.Both);
     public static Elevator No12 { get; } = new(12, (37.5035963, 126.9560827), new() { B3, B2, B1, F1, F2, F3, F4, F5, F6, F7, F8, F9 }, "B3~B1, F1~F9", MovingProperty.Both);
-
-    // 13~14호기 위치 확인 불가 (1~10층에 없음)
     public static Elevator No13 { get; } = new(13, (37.5040990, 126.9566181), new() { B6, B5 }, "B6~B5 (대형강의실용)", MovingProperty.Underground);    }
